@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="_25112023_MasterPage.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style >
+       ul.ustMenu{
+           list-style-type:none;
+           padding:0;
+       }
+        ul.ustMenu li{
+            display:inline-block;
+        }
+            ul.ustMenu li a{
+                padding:10px 20px;
+                border-bottom:2px solid #fff;
+                text-decoration:none;
+                color:black;
+            }
+                ul.ustMenu li a:hover{
+                    border-bottom-color:#e5554e;
+                    color:#e5554e;
+                    transition: .5s;
+                }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="padding:30px" >
+            <ul class="ustMenu">
+                <li><a href="AnaSayfa.aspx"> Ana Sayfa</a></li>
+                <li><a href="Hakkimizda.aspx"> Hakkımızda </a></li>
+                <li><a href="Urunler.aspx"> Ürünler</a></li>
+            </ul>
+
+        </div>
+        <table width="100">
+            <tr>
+                <td style="background-color:#c5c5c5; color:#fff; padding:30px; width:150px; height:400px">
+                    Sayfa Sol Alanı
+                </td>
+                <td class="auto-style1">
+                    <asp:ContentPlaceHolder ID="icerik" runat="server">
+            </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+
+        </table>
+            <div style="background-color:#000; color:#fff; padding:30px;">
+                Sayfa Alt Alan
+            </div>
+        
+    </form>
+</body>
+</html>
